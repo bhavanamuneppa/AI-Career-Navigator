@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Career Navigator Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>AI Career Navigator Result</h1>
+
+    <h2>{{ result }}</h2>
+
+    <h3>Placement Readiness Score: {{ score }}%</h3>
+
+    <h3>Target Career: {{ career }}</h3>
+
+    <hr>
+
+    <h3>Skills Found In Resume</h3>
+    <p>{{ found_skills }}</p>
+
+    <h3>Missing Skills</h3>
+    <p>{{ missing_skills }}</p>
+
+    <hr>
+
+    <h3>Career Roadmap</h3>
+
+    <ul>
+        {% for item in roadmap %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+
+    <a href="/">← Go Back</a>
+
+</div>
+
+</body>
+</html>

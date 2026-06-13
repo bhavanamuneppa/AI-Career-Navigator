@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Career Navigator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>AI Career Navigator for Students</h1>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+
+        <label>CGPA</label>
+        <input type="number" step="0.1" name="cgpa" required>
+
+        <label>Projects</label>
+        <input type="number" name="projects" required>
+
+        <label>Internships</label>
+        <input type="number" name="internships" required>
+
+        <label>Certifications</label>
+        <input type="number" name="certifications" required>
+
+        <label>Coding Score</label>
+        <input type="number" name="codingscore" required>
+
+        <label>Target Career</label>
+        <select name="career">
+            <option>AI Engineer</option>
+            <option>Data Scientist</option>
+            <option>Software Engineer</option>
+            <option>Data Analyst</option>
+        </select>
+
+        <label>Resume (PDF)</label>
+        <input type="file" name="resume" accept=".pdf" required>
+
+        <button type="submit">Predict</button>
+        <br>
+
+<a href="/dashboard">
+    View Dashboard
+</a>
+
+    </form>
+
+
+</div>
+<hr>
+
+<p style="text-align:center; color:white;">
+AI Career Navigator for Students |
+Developed by Bhavana M
+</p>
+
+</body>
+</html>
